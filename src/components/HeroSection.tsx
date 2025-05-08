@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Star, Clock, Award } from 'lucide-react';
+import { ArrowRight, Star, Clock, Award, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -46,9 +46,14 @@ const HeroSection = () => {
                 Order Now
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white rounded-full">
-                View Menu
-              </Button>
+              <Button
+  variant="outline"
+  className="relative border-white/50 text-white bg-transparent hover:bg-white hover:text-gray-900 hover:border-white shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-white/30 focus:ring-2 focus:ring-white rounded-full px-6 flex items-center group overflow-hidden"
+>
+  <span className="relative z-10">View Menu</span>
+  <ChevronRight className="ml-2 h-4 w-4 relative z-10 transition-transform group-hover:translate-x-1" />
+  <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300"></span>
+</Button>
             </div>
             
             {/* Stats */}
